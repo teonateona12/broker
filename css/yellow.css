@@ -1,0 +1,33 @@
+/*
+Template Name: Ivana - Under Construction Template
+Author: ThemeManiac
+*/
+
+.top-main {
+  background: #ffc600;
+}
+.main-text span {
+  color: #ffc600;
+}
+#panel ul li a:hover {
+  color: #ffc600;
+}
+#controls-wrapper {
+  border-right: #ffc600 solid 10px;
+}
+.colorbox-title {
+  border-left: 0px solid #ffc600;
+}
+.colorbox-inline-title {
+  border-left: 0px solid #ffc600;
+}
+.panel_button {
+  background: #ffc600;
+}
+
+.panel2_button2 {
+  background: #ffc600;
+}
+.hide_button2 {
+  background: none;
+}

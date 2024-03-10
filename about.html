@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>About us</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="css/colorbox.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="css/main-white.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      href="css/jquery.mCustomScrollbar-white.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="css/fonts.css"
+      type="text/css"
+      media="screen"
+    />
+
+    <!-- JS scripts  -->
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"
+    ></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+  </head>
+
+  <body>
+    <div class="colorbox-title">ჩვენს შესახებ</div>
+
+    <!-- content block -->
+    <div id="mcs_container">
+      <div class="customScrollBox">
+        <div class="container">
+          <div class="content">
+            <div>
+              <!--Portfolio item-->
+              <div
+                style="float: left; padding-right: 15px; padding-bottom: 4px"
+              >
+                <img
+                  src="images/forweb.jpg"
+                  style="width: 170px; height: 170px"
+                  alt="Blog"
+                />
+              </div>
+            </div>
+            <p
+              style="
+                overflow: auto;
+                max-height: 300px;
+                display: flex;
+                flex-wrap: wrap;
+              "
+            >
+              Broker.ge - ბროკერ.ჯი - უძრავი ქონების საბროკერო კომპანია. ჩვენ
+              გახლავართ ბევრად მეტი, ვიდრე რიგობითი შუამავალი. ჩვენი კომპანია,
+              არამხოლოდ გეხმარებათ თქვენ თქვენი მოთხოვნების დაკმაყოფილებაში,
+              არამედ ჩვენ ვართ საიმედო და კომფორტული პარტნიორი, რომელიც
+              მრავალწლიანი გამოცდილების შედეგად, უძრავი ქონების
+              სპეციალისტებისგან არის შექმნილი. ჩვენ ვამაყობთ იმით, რომ ვთავაზობთ
+              ჩვენს მომხმარებლებს, ინდივიდუალურ მიდგომასა და ხარისხიან სერვისს
+              აბსოლუტურად ყველას, მათი ნებისმიერი უნიკალური მოთხოვნის
+              შესაბამისად. ჩვენი პროფესიონალური გუნდი, რომელიც შედგება საუკეთესო
+              უძრავი ქონების ექსპერტებისაგან გარანტირებულად უზრუნველყოფს მაღალი
+              კლასის მომსახურეობას და ეფექტური სტრატეგიების შემუშავებას თქვენი
+              გარიგებების განსახორციელებლად. ჩვენი მომსახურეობის არეალი მოიცავს
+              არა მარტო სრული სერვისების მიწოდებას უძრავი ქონების დარგში, არამედ
+              იმ პირადი ინტერესების დაცულობას, რაც პოტენციურად შესაძლოა
+              დასჭირდეს ჩვენს მომხმარებლებს. ჩვენი მისიის ფარგლებში, ჩვენ
+              ვცდილობთ არა მარტო განვახორციელოთ თითეული გარიგება, არამედ
+              დავამყაროთ გრძელვადიანი ურთიერთობა ყველა ჩვენს მომხმარებელთან. ეს
+              ყოველივე პროფესიონალური მიდგომისა და ნდობის ფარგლებში.
+              თანამშრომლობა ჩვენს გუნდთან გაძლევთ თქვენ იმის გარანტიას, რომ
+              თქვენი მოთხოვნები იქნება შესრულებული პროფესიონალურად და
+              სრულყოფილად, რაც აუცილებლად დადებითად იმოქმედებს ჩვენს სამომავლო
+              ურთერთობაზე.
+            </p>
+            <p></p>
+            <p style="overflow: auto; max-height: 300px"></p>
+          </div>
+        </div>
+        <!-- <div class="dragger_container">
+          <div class="dragger"></div>
+        </div> -->
+      </div>
+      <!-- <a href="#" class="scrollUpBtn"></a>
+      <a href="#" class="scrollDownBtn"></a> -->
+    </div>
+
+    <!-- content to show if javascript is disabled -->
+    <noscript>
+      <style type="text/css">
+        #mcs_container .customScrollBox {
+          overflow: auto;
+        }
+        #mcs_container .dragger_container {
+          display: none;
+        }
+      </style>
+    </noscript>
+
+    <script type="text/javascript">
+      $(window).load(function () {
+        mCustomScrollbars();
+      });
+
+      function mCustomScrollbars() {
+        /* 
+	malihu custom scrollbar function parameters: 
+	1) scroll type (values: "vertical" or "horizontal")
+	2) scroll easing amount (0 for no easing) 
+	3) scroll easing type 
+	4) extra bottom scrolling space for vertical scroll type only (minimum value: 1)
+	5) scrollbar height/width adjustment (values: "auto" or "fixed")
+	6) mouse-wheel support (values: "yes" or "no")
+	7) scrolling via buttons support (values: "yes" or "no")
+	8) buttons scrolling speed (values: 1-20, 1 being the slowest)
+	*/
+        $("#mcs_container").mCustomScrollbar(
+          "vertical",
+          200,
+          "easeOutCirc",
+          1.05,
+          "fixed",
+          "yes",
+          "yes",
+          15
+        );
+      }
+
+      /* function to fix the -10000 pixel limit of jquery.animate */
+      $.fx.prototype.cur = function () {
+        if (
+          this.elem[this.prop] != null &&
+          (!this.elem.style || this.elem.style[this.prop] == null)
+        ) {
+          return this.elem[this.prop];
+        }
+        var r = parseFloat(jQuery.css(this.elem, this.prop));
+        return typeof r == "undefined" ? 0 : r;
+      };
+
+      /* function to load new content dynamically */
+      function LoadNewContent(id, file) {
+        $("#" + id + " .customScrollBox .content").load(file, function () {
+          mCustomScrollbars();
+        });
+      }
+    </script>
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+  </body>
+</html>

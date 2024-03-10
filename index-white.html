@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Broker</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="css/main-white.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="css/supersized.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="css/supersized.shutter.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="css/colorbox.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="css/fonts.css"
+      type="text/css"
+      media="screen"
+    />
+    <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="css/jquery.mCustomScrollbar-white.css"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" />
+
+    <!-- JS scripts  -->
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+    ></script>
+
+    <!-- begin Colorbox script-->
+
+    <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="js/colorbox-fade.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".iframe").colorbox({ iframe: true, width: "760", height: "372" });
+        $(".inline").colorbox({ inline: true, width: "760", height: "350" });
+      });
+    </script>
+
+    <!-- begin Other scripts-->
+    <script type="text/javascript" src="js/prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/jquery.countdown.js"></script>
+    <script type="text/javascript" src="js/twitter/jquery.tweet.js"></script>
+    <script type="text/javascript" src="js/jquery.tipsy.js"></script>
+
+    <!-- begin Custom script-->
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <!-- begin Video script-->
+    <link
+      href="css/mb.YTVPlayer.css"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script type="text/javascript" src="inc/jquery.metadata.js"></script>
+    <script type="text/javascript" src="inc/jquery.mb.YTPlayer.js"></script>
+
+    <script type="text/javascript">
+      $(function () {
+        $("button")
+          .not(".command")
+          .click(function () {
+            $("button").not(".command").removeClass("sel");
+            $(this).addClass("sel");
+          });
+
+        // debug functions
+        $(document).bind("YTPStart", function () {
+          $("#eventListener").html("YTPStart");
+        });
+        $(document).bind("YTPEnd", function () {
+          $("#eventListener").html("YTPStop");
+        });
+        $(document).bind("YTPPause", function () {
+          $("#eventListener").html("YTPPause");
+        });
+        $(document).bind("YTPBuffering", function () {
+          $("#eventListener").html("YTPBuffering");
+        });
+
+        $("#bgndVideo").mb_YTPlayer({
+          videoURL: "video.mp4",
+          containment: "body",
+          showControls: false,
+          autoPlay: true,
+          loop: true,
+          opacity: 1,
+        });
+      });
+    </script>
+  </head>
+
+  <body style="background: #fff">
+    <!--Thumbnail Navigation-->
+    <div id="prevthumb"></div>
+    <div id="nextthumb"></div>
+
+    <!-- begin Main Block-->
+    <div class="main-frame">
+      <div
+        class="top-main"
+        style="width: 120px; position: relative; z-index: 1"
+      >
+        ჩაირთვება მალე
+      </div>
+      <div class="main">
+        <div id="Countdown2">
+          <div id="Countdown">
+            <!-- Countdown inserted using jQuery - launch.js -->
+          </div>
+        </div>
+        <div class="main-text">
+          <!-- We will get back as soon as possible<span>.</span> -->
+          <img src="images/logo.png" style="width: 150px" />
+        </div>
+      </div>
+
+      <!-- begin Navigation panel -->
+      <div id="navigationpanel">
+        <div id="panel" style="width: 325px">
+          <ul>
+            <li><a href="about.html" class="iframe">ჩვენს შესახებ</a></li>
+            <li><a href="#inline" class="inline">სერვისები</a></li>
+            <li>
+              <a href="contact/index.html" class="iframe">კონტაქტი</a>
+            </li>
+          </ul>
+        </div>
+        <!-- close #panel -->
+
+        <div style="left: 0px; display: block" class="panel_button">
+          <img alt="expand" src="img/open.png" />
+        </div>
+        <!-- close #panel_button -->
+        <div style="left: 0px; display: none" class="panel_button hide_button">
+          <img alt="collapse" src="img/close.png" />
+        </div>
+        <!-- close #panel_button -->
+      </div>
+      <!-- endNavigation panel -->
+    </div>
+    <!-- end Main Block-->
+
+    <!-- begin Time Bar-->
+    <div id="progress-back" class="load-item">
+      <div id="progress-bar"></div>
+    </div>
+
+    <!--begin Control Bar-->
+    <div id="controls-wrapper" class="load-item">
+      <div id="controls">
+        <!--begin Twitter-->
+        <!-- <div class="twitterf">
+          <span style="float: left">LATEST TWEET: </span>
+          <div
+            id="twitter"
+            style="float: left; margin-left: 8px; padding-top: 1px"
+          >
+            <script type="text/javascript">
+              $(document).ready(function () {
+                $("#twitter").tweet({
+                  modpath: "js/twitter/",
+                  count: 1,
+                  username: ["thememaniac"],
+                  loading_text: "loading twitter feed...",
+                  /* etc... */
+                });
+              });
+            </script>
+            <div id="twitter" class="query"></div>
+          </div>
+        </div> -->
+
+        <!--begin Social icons-->
+        <!-- <div class="social-icons">
+          <ul>
+            <li>
+              <a title="Facebook" href="http://facebook.com/#"
+                ><img src="img/facebook-white.png" alt="Facebook" width="17"
+              /></a>
+            </li>
+            <li>
+              <a title="YouTube" href="http://youtube.com/#"
+                ><img src="img/youtube-white.png" alt="Youtube" height="17"
+              /></a>
+            </li>
+            <li>
+              <a title="Twitter" href="http://twitter.com/#"
+                ><img src="img/twitter-white.png" alt="Twitter" width="21"
+              /></a>
+            </li>
+          </ul>
+        </div> -->
+        <!--end Social icons-->
+      </div>
+    </div>
+    <!--end Control Bar-->
+
+    <!--begin Video control bar-->
+    <div id="content">
+      <div class="console">
+        <!-- <button
+          class="sel"
+          onclick="jQuery('#bgndVideo').changeMovie({videoURL:'http://www.youtube.com/watch?v=acTCQn5fvaY&hd=1'})"
+        >
+          Lorem ipsum theme song 1973
+        </button> -->
+        <!-- <button
+          onclick="jQuery('#bgndVideo').changeMovie({videoURL:'http://www.youtube.com/watch?v=BLcLCIopPco&hd=1'})"
+        >
+          New Vision Concept Car (original)
+        </button> -->
+        <!-- <button
+          onclick="jQuery('#bgndVideo').changeMovie({videoURL:'http://www.youtube.com/watch?v=C9BBVW_KDTA&hd=1'})"
+        >
+          BMW Commercial (Director of Photography, Editor)
+        </button> -->
+        <!-- <button
+          onclick="jQuery('#bgndVideo').changeMovie({videoURL:'http://www.youtube.com/watch?v=ZL_6VySX_KQ&hd=1'})"
+        >
+          BMW M3 0-60 Commercial
+        </button> -->
+      </div>
+
+      <div class="play-pause">
+        <button
+          class="command"
+          onclick="jQuery('#bgndVideo').YTPGetPlayer().playVideo()"
+        >
+          play
+        </button>
+        <button
+          class="command"
+          onclick="jQuery('#bgndVideo').YTPGetPlayer().pauseVideo()"
+        >
+          pause
+        </button>
+      </div>
+
+      <video
+        id="bgVideo"
+        style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          object-fit: cover;
+          z-index: -1;
+        "
+        autoplay
+        loop
+        muted
+        playsinline
+      >
+        <source src="video.mp4" type="video/mp4" />
+        <!-- Add additional source elements for different video formats if needed -->
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!--end Video control bar-->
+
+    <!-- begin inline Portfolio-->
+    <div style="display: none">
+      <div id="inline" style="height: 330px">
+        <div class="colorbox-inline-title">სერვისები</div>
+
+        <div class="portfolio-line" style="overflow: auto; max-height: 300px">
+          <!--Portfolio item-->
+          <p
+            style="
+              height: 350px;
+              padding-right: 40px;
+              font-size: 11px;
+              line-height: 20px;
+            "
+          >
+            ჩვენთან თანამშრომლობის ფარგლებში, თქვენ შეგიძლიათ ისარგებლოთ შემდეგი
+            სერვისებით:
+            <br /><br /><span style="font-weight: 500; font-size: 16px"
+              >უძრავი ქონების ყიდვა / გაყიდვა / გაქირავება.</span
+            ><br />
+            ჩვენი უძრავი ქონების აგენტების ჯგუფები მზად არიან შემოგთავაზონ
+            მაღალი ხარისხის მომსახურება, გაყიდვების სტრატეგიის დაგეგმარება და
+            პროცესის დროს გაგიწიონ მხარდაჭერა ყველა ეტაპზე.<br /><br />
+            <span style="font-weight: 500; font-size: 16px"
+              >უძრავი ქონების შეფასება</span
+            >
+            <br />
+            კომპანიის ექსპერტთა ჯგუფი აფასებს თქვენს ქონებას ბაზარზე არსებულ
+            უძრავ ქონებასთან თანხვედრაში. ითვალისწინებენ როგორც მის
+            მდგომარეობას, აგრეთვე, პოტენციურ ფასთა ზრდას.
+            <br /><br />
+            <span style="font-weight: 500; font-size: 16px"
+              >ფოტო/ვიდეო გადაღება
+            </span>
+            <br />
+            უძრავ ქონებაში ეფექტური, მაღალი ხარისხის და საინტერესო ფოტოს
+            გადაღება არის მნიშვნელოვანი ფაქტორი. ჩვენი გუნდი გთავაზობს
+            პროფესიონალურ ვიდეო მიმოხილვას და ფოტო გადაღებას, ეფექტური
+            რეკლამირებისთვის. დამატებით ჩვენი კომპანია გთავაზობთ: ციფრულ მედიაში
+            რეკლამირება, იურიდიული მომსახურება, პარტნიორ ნოტარიუსებთან და
+            აუდიტებთან თანამშრომლობას ,აგრეთვე, საინვესტიციო პორტფელის მომზადება
+            უძრავი ქონების დარგში.
+          </p>
+          <!-- <div class="hover-port">
+            <div class="img-post">
+              <a
+                href="http://vimeo.com/11998763"
+                rel="prettyPhoto"
+                title="Real estate"
+                ><img src="img/1.jpg" alt="Blog" />
+              </a>
+            </div>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit</p>
+          </div> -->
+
+          <!--Portfolio item-->
+          <!-- <div class="hover-port">
+            <div class="img-post">
+              <a href="img/blog2.jpg" rel="prettyPhoto" title="Real estate"
+                ><img src="img/2.jpg" alt="Blog" />
+              </a>
+            </div>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit</p>
+          </div> -->
+
+          <!--Portfolio item-->
+          <!-- <div class="hover-port last">
+            <div class="img-post">
+              <a href="img/blog2.jpg" rel="prettyPhoto" title="Real estate"
+                ><img src="img/3.jpg" alt="Blog" />
+              </a>
+            </div>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit</p>
+          </div> -->
+        </div>
+
+        <div class="portfolio-line"></div>
+      </div>
+    </div>
+    <!-- end inline Portfolio-->
+  </body>
+</html>
